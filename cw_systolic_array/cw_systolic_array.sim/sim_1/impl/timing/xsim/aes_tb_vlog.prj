@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../cw305_aes.srcs/sources_1/imports/fpgas/aes/hdl" --include "../../../../../cw305_aes.srcs/sim_1/imports/hdl" \
+"aes_tb_time_impl.v" \
+"../../../../../../../rtl/aes256_dpin_protection/addroundkey.v" \
+"../../../../../cw305_aes.srcs/sources_1/new/aes256.v" \
+"../../../../../../../rtl/aes256_dpin_protection/aes_round.v" \
+"../../../../../cw305_aes.srcs/sources_1/imports/fpgas/cryptosrc/aes_googlevault/aes_sbox.v" \
+"../../../../../../../rtl/aes256_dpin_protection/buff_10.v" \
+"../../../../../../../rtl/aes256_dpin_protection/keyexpand.v" \
+"../../../../../../../rtl/aes256_dpin_protection/lfsr_100.v" \
+"../../../../../../../rtl/aes256_dpin_protection/mixcolumns.v" \
+"../../../../../../../rtl/aes256_dpin_protection/sbox.v" \
+"../../../../../../../rtl/aes256_dpin_protection/shiftrows.v" \
+"../../../../../../../rtl/aes256_dpin_protection/subbytes.v" \
+"../../../../../cw305_aes.srcs/sim_1/new/aes_tb.b" \
+
+# Do not sort compile order
+nosort

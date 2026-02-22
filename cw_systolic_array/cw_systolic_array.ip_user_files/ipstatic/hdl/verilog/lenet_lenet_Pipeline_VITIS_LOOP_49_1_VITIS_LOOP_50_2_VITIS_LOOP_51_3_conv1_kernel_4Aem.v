@@ -1,0 +1,38 @@
+// ==============================================================
+// Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2021.2 (64-bit)
+// Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+// ==============================================================
+`timescale 1 ns / 1 ps
+module lenet_lenet_Pipeline_VITIS_LOOP_49_1_VITIS_LOOP_50_2_VITIS_LOOP_51_3_conv1_kernel_4Aem (
+address0, ce0, q0, reset,clk);
+
+parameter DataWidth = 32;
+parameter AddressWidth = 3;
+parameter AddressRange = 6;
+
+input[AddressWidth-1:0] address0;
+input ce0;
+output reg[DataWidth-1:0] q0;
+input reset;
+input clk;
+
+reg [DataWidth-1:0] ram[0:AddressRange-1];
+
+initial begin
+    $readmemh("./lenet_lenet_Pipeline_VITIS_LOOP_49_1_VITIS_LOOP_50_2_VITIS_LOOP_51_3_conv1_kernel_4Aem.dat", ram);
+end
+
+
+
+always @(posedge clk)  
+begin 
+    if (ce0) 
+    begin
+        q0 <= ram[address0];
+    end
+end
+
+
+
+endmodule
+
